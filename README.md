@@ -27,23 +27,23 @@ The plugin extends the [Slack plugin](https://github.com/gedex/wp-slack) to send
 
 ## Changelog
 
-= 1.1.3 =
+### 1.1.3
 * Added copy of GPL
 
-= 1.1.2 =
+### 1.1.2
 * Fixed bug in theme update code
 
-= 1.1.1 =
+### 1.1.1
 * Fixed bug in theme update code
 
-= 1.1.0 =
+### 1.1.0
 * Added support for core updates.
 * Added support for theme updates.
 * Added readme.txt
 
-= 1.0.1 =
+### 1.0.1
 * Changed removed return value for "no updates" scenario
 
-= 1.0.0 =
+### 1.0.0
 Initial release
 * Added support for plugin updates
