@@ -1,4 +1,4 @@
-=== Slack Plugin Updates Notifier ===
+=== Slack WP Updates Notifier ===
 Contributors:      garymarkfuller
 Tags:              slack, api, chat, notification, updates
 Requires at least: 4.8.1
