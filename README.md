@@ -1,4 +1,4 @@
-# Slack Plugin Updates Notifier
+# Slack WP Updates Notifier
 
 Contributors:      garymarkfuller
 
