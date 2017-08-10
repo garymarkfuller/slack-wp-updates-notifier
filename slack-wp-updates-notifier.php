@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Slack WP Updates Notifier
- * Plugin URI: https://github.com/garymarkfuller
+ * Plugin URI: https://github.com/garymarkfuller/slack-wp-updates-notifier
  * Description: Extends the Slack plugin to send notifications when an update is available.
  * Author: garymarkfuller
  * Version: 1.1.3
