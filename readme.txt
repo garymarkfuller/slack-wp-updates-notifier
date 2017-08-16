@@ -3,7 +3,7 @@ Contributors:      garymarkfuller
 Tags:              slack, api, chat, notification, updates
 Requires at least: 4.8.1
 Tested up to:      4.8.1
-Stable tag:        1.1.3
+Stable tag:        1.1.4
 License:           GPL v2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,9 @@ The plugin extends the [Slack plugin](https://github.com/gedex/wp-slack) to send
 * Multisite support
 
 == Changelog ==
+
+= 1.1.4 =
+* Reduced frequency of update messages to once per day at Midday
 
 = 1.1.3 =
 * Added copy of GPL

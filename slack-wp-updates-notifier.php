@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/garymarkfuller/slack-wp-updates-notifier
  * Description: Extends the Slack plugin to send notifications when an update is available.
  * Author: garymarkfuller
- * Version: 1.1.3
+ * Version: 1.1.4
  * Author URI: https://github.com/garymarkfuller
  * Text Domain: slack-wp-updates-notifier
  * License: GPL v2 or later
@@ -40,7 +40,8 @@ add_filter( 'slack_get_events', function( $events ) {
         'description' => __( 'Whether there are plugin updates available', 'slack' ),
         'message'     => function() {
             $update_plugins = get_site_transient( 'update_plugins' );
-            if (!empty( $update_plugins->response )) {
+            $time = new DateTime();
+            if (!empty( $update_plugins->response ) && $time->format('H') == '12') {
                 $plugins_needing_updates = $update_plugins->response;
                 $plugin_names_array = array_keys($plugins_needing_updates);
                 $plugin_names = implode(", ", $plugin_names_array);
@@ -55,7 +56,8 @@ add_filter( 'slack_get_events', function( $events ) {
         'description' => __( 'Whether there are core updates available', 'slack' ),
         'message'     => function() {
             $update_core = get_site_transient( 'update_core' );
-            if ('upgrade' == $update_core->updates[0]->response) {
+            $time = new DateTime();
+            if ('upgrade' == $update_core->updates[0]->response && $time->format('H') == '12') {
                 $new_core_version = $update_core->updates[0]->current;
                 return sprintf('Please update WordPress to version %s.', $new_core_version);
             } else {
@@ -68,7 +70,8 @@ add_filter( 'slack_get_events', function( $events ) {
         'description' => __( 'Whether there are theme updates available', 'slack' ),
         'message'     => function() {
             $update_themes = get_site_transient( 'update_themes' );
-            if (!empty( $update_themes->response )) {
+            $time = new DateTime();
+            if (!empty( $update_themes->response ) && $time->format('H') == '12') {
                 $themes_needing_updates = $update_themes->response;
                 $themes_names_array = array_keys($themes_needing_updates);
                 $themes_names = implode(", ", $themes_names_array);
